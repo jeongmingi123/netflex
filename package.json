@@ -1,0 +1,29 @@
+{
+  "name": "netfliex",
+  "version": "1.0.0",
+  "description": "netfliex study cloning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeongmingi123/netflex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeongmingi123/netflex/issues"
+  },
+  "homepage": "https://github.com/jeongmingi123/netflex#readme",
+  "dependencies": {
+    "@babel/node": "^7.12.1",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "nodemon babel-node index.js --delay 2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
