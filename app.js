@@ -7,15 +7,18 @@ import { userRouter } from "./routers/userRouter.js";
 import { videoRouter } from "./routers/videoRouter.js";
 import { globalRouter } from "./routers/globalRouter.js";
 import { routes } from "./routes.js";
+import { localMiddleware } from "./middlewares.js";
 const app = express();
+app.use(express.static("public"));
 
-const handleHome = (req, res) => res.send("Hello from home");
-
+app.set("view engine", "pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(morgan("dev")); // 어떠한 방식과 어디 폴더에 접속하는지 알수있음 + 컬러추가
+app.use(localMiddleware);
+app.use(express.static("public"));
 
 // app.use(morgan("tiny")); // 어떠한 방식과 어디 폴더에 접속하는지 알수있음
 // app.use(morgan("combined")); // 어떤 종류의 접속인지 어떤 브라우저인지 등등에 대하여 알 수 있다.
