@@ -1,0 +1,8 @@
+extends layouts/main.pug
+
+block content
+    .from__container
+        form(action="route.login", method="post")
+            input(type="email", name="email", placeholder="Email")
+            input(type="password", name="password", placeholder="Password")
+            input(type="submit", Value="Log In")
