@@ -3,9 +3,3 @@ include mixins/videoBlock.pug
 
 block content
     .videos
-        each item in videos
-            +videoBlock({
-                title:item.title,
-                views:item.views,
-                videoFile:item.videoFile,
-            })
