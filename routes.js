@@ -1,5 +1,5 @@
 // Global
-const HOME = "/";
+const HOME = "/bdsd";
 const JOIN = "/join";
 const LOGIN = "/login";
 const LOGOUT = "/logout";
