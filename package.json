@@ -28,6 +28,7 @@
     "body-parser": "^1.19.0",
     "bootloader": "^1.0.1",
     "cookie-parser": "^1.4.5",
+
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.0",
     "dotenv": "^8.2.0",
@@ -36,7 +37,9 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "helmet": "^4.1.1",
     "mini-css-extract-plugin": "^1.2.1",
-    "mongoose": "^5.10.11",
+    "github": "^14.0.0",
+    "mongoose": "^5.10.14",
+
     "morgan": "^1.10.0",
     "postcss": "^8.1.4",
     "postcss-loader": "^4.0.4",

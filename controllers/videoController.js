@@ -1,7 +1,17 @@
 import routes from "../routes.js";
+import Video from "../models/Video.js"
 
 // 하나의 템플릿에서만 변수를 사용할때는 두번째 인자에 다음과같이 변수를 정의함
-export const home = (req, res) => res.render("home", { pageTitle: "Home" });
+
+export const home = async (req, res) => {
+    try{
+        const videos = await Video.find({});
+        res.render("home", {pageTitle: "Home", videos});
+    } catch (error){
+        console.log(error);
+        res.render("home", {pageTitle: "Home", videos: []});
+    }
+}
 
 export const search = (req, res) => {
   const searchingBy = req.query.term;
