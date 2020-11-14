@@ -12,11 +12,11 @@ const app = express();
 app.use("/uploads", express.static("uploads"));
 app.use("/static", express.static("static"));
 
+app.use(helmet());
 app.set("view engine", "pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(helmet());
 app.use(morgan("dev")); // 어떠한 방식과 어디 폴더에 접속하는지 알수있음 + 컬러추가
 app.use(localMiddleware);
 
