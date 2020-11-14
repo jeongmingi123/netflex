@@ -1,0 +1,38 @@
+.header__wrapper {
+  padding: 15px 40px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  justify-content: space-between;
+  .header__column--logo {
+    color: $red;
+    font-size: 30px;
+  }
+  .header__column--menu {
+    color: $red;
+    font-size: 15px;
+  }
+
+  input {
+    width: 400px;
+    height: 30px;
+  }
+
+  .header__column--search {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    width: 200px;
+    display: flex;
+    margin: 0px 10px;
+    justify-content: space-between;
+  }
+  button {
+    color: $red;
+    background-color: $white;
+  }
+}

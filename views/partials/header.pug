@@ -1,30 +1,22 @@
 header.header
-    .header__column
-        a(href=routes.home)
-            img(src="../image1.png")
-    .header__column
-        form(action=routes.search, method="get")
-            input(type="text", placeholoder="Search by term", name="term")
-    .header__column
-        ul
-            if !user.isAuthenticated
-                li
-                    a(href=routes.join) Join
-                li
-                    a(href=routes.login) Logged In
-            else
-                li
-                    a(href=`/videos${routes.upload}`) Upload
-                li
-                    a(href=routes.userDetail(user.id)) Profile
-                li
-                    a(href=routes.logout) Log out
-                    
-    .header__column
-    .header__column
-    .header__column
-    .header__column
-    .header__column
-    .header__column
-
-    
+    .header__wrapper
+        .header__column.header__column--logo
+            a(href=routes.home) NETFLEIX
+        .header__column.header__column--search
+            form(action=routes.search, method="get")
+                input(type="text", placeholder="Search by term...", name="term")
+            button 검색
+        .header__column.header__column--menu
+            ul
+                if !user.isAuthenticated
+                    li
+                        a(href=routes.join) 회원가입
+                    li
+                        a(href=routes.login) 로그인
+                else 
+                    li
+                        a(href=`/videos${routes.upload}`) Upload
+                    li
+                        a(href=routes.userDetail(user.id)) Profile
+                    li
+                        a(href=routes.logout) 로그아웃
