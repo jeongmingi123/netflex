@@ -6,8 +6,7 @@ mongoose.connect(
     process.env.MONGO_URL,
     {
         useNewUrlParser:true, 
-        userFindAndModify: false,
-        useUnifiedTopology: true,
+        useFindAndModify: false,
     }
 );
 
