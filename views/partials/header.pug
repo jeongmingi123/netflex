@@ -5,18 +5,18 @@ header.header
         .header__column.header__column--search
             form(action=routes.search, method="get")
                 input(type="text", placeholder="Search by term...", name="term")
-            button 검색
+            button(style="background-color:#000000") 검색
         .header__column.header__column--menu
             ul
                 if !user.isAuthenticated
                     li
-                        a(href=routes.join) 회원가입
+                        a(href=routes.join) Join
                     li
-                        a(href=routes.login) 로그인
+                        a(href=routes.login) Login
                 else 
                     li
                         a(href=`/videos${routes.upload}`) Upload
                     li
                         a(href=routes.userDetail(user.id)) Profile
                     li
-                        a(href=routes.logout) 로그아웃
+                        a(href=routes.logout) Logout

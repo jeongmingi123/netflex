@@ -7,11 +7,12 @@
   justify-content: space-between;
   .header__column--logo {
     color: $red;
-    font-size: 30px;
+    font-size: 40px;
   }
   .header__column--menu {
     color: $red;
     font-size: 15px;
+    font-weight: bold;
   }
 
   input {

@@ -1,11 +1,17 @@
 extends layouts/main.pug
 
 block content
-    .from__container
-        form(action=routes.join, method="post")
-            input(type="text", name="name", placeholder="Full Name")
-            input(type="email", name="email", placeholder="Email")
-            input(type="password", name="password", placeholder="Password")
-            input(type="password", name="password2", placeholder="Verify Password")
-            input(type="submit", Value="Log In")
-        include partials/socialLogin.pug
+    .form__container
+        form(action=routes.join, method="post" class="form__container-content")
+            .form__container__title
+                span 회원가입
+            .form__container__name.menu
+                input(type="text", name="name", placeholder="Full Name" id="form__container__menu")
+            .form__container__email.menu
+            input(type="email", name="email", placeholder="Email" id="form__container__menu")
+            .form__container__password.menu
+            input(type="password", name="password", placeholder="Password" id="form__container__menu")
+            .form__container__password2.menu
+            input(type="password", name="password2", placeholder="Verify Password" id="form__container__menu")
+            .form__container__join.menu
+            input(id="join",type="submit", Value="Join" style="font-size:30px")

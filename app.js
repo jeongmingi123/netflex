@@ -11,6 +11,7 @@ import { localMiddleware } from "./middlewares.js";
 const app = express();
 app.use("/uploads", express.static("uploads"));
 app.use("/static", express.static("static"));
+app.use("/public",express.static("public"))
 
 app.use(helmet());
 app.set("view engine", "pug");
